@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .main div:nth-of-type(1) {
+            background: pink;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+            grid-row-start: 1; /*默认值： auto；指定后打破了auto，导致第二个div效果是紧密排列*/
+            grid-row-end: 2;
+
+        }
+
+        .main div:nth-of-type(2) {
+            background: slategray;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>1</div>
+    <div>2</div>
+</div>
+</body>
+</html>

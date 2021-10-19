@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body {
+            height: 2000px;
+            position: relative;
+        }
+
+        .box1 {
+            width: 500px;
+            height: 500px;
+            border: 1px black solid;
+            margin: 200px;
+            position: relative;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+</body>
+</html>
+<!--
+固定定位及特性：
+1、固定定位与绝对定位相似，但是会固定在可视区中。
+2、具备内联盒子特性：宽度由内容决定。
+3、具备块级盒子特性：支持所有样式。
+4、固定定位元素不受祖先元素影响。
+-->

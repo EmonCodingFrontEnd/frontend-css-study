@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson_031_盒模型</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            padding: 20px;
+            border: 10px rgba(0, 0, 0, 0.5) solid;
+            margin: 20px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">我是一个盒子</div>
+<div class="box2">我是另一个盒子</div>
+</body>
+</html>
+
+<!--
+CSS盒模型的注意点：
+1、padding不能为负值，而margin可以为负值
+2、背景色会平铺到非margin的区域（不含margin）
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 200px;
+            border: 1px black solid;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+    <!-- 使用空标签清除浮动-->
+    <div style="clear:both;"></div>
+</div>
+aaa
+</body>
+</html>
+<!--
+清除浮动的方案：
+1、clear属性
+2、BFC
+3、空标签
+4、.clearfix::after{}
+
+-->

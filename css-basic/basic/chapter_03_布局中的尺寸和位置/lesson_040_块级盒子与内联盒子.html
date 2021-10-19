@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            /*width: 100px;*/
+            height: 100px;
+            background: pink;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+        }
+
+        .inline1 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+
+        .inline2 {
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<span class="inline1">内联盒子1</span>
+<span class="inline2">内联盒子2内联盒子2内联盒子2内联盒子2内联盒子2内联盒子2内联盒子2</span>
+</body>
+</html>
+<!--
+块级盒子与内联盒子：
+在CSS中我们广泛地使用两种“盒子”————块级盒子（block box）和内联盒子（inline box）。这两种盒子会在页面中表现出不同的行为方式。
+
+块级盒子：
+div、 p、 h1
+块级盒子的特性：
+1、独占一行
+2、支持所有样式
+3、当不写宽度时，会跟父容器宽度相同
+4、所占区域是一个矩形
+
+内联盒子：
+span、 a、 strong
+内联盒子的特性：
+1、盒子不会产生换行
+2、有一些样式不支持，例如：width、height等
+3、不写宽度的时候，宽度由内容决定
+4、所占区域不一定是矩形，根据内容情况而定
+5、内联标签之间有空隙
+
+总结：做布局不建议使用内联标签，建议使用块标签！！！
+
+特殊说明：如何知道一个标签是块标签还是内联标签？
+打开google->F12->Elements->Computed，选中标签时，根据display属性决定：
+display=block，表示块级标签
+display=inline，表示内联标签
+-->

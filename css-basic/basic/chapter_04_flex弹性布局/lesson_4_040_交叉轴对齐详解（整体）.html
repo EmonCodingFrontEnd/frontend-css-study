@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background: skyblue;
+            display: flex;
+            flex-wrap: wrap;
+            /*当不折行情况下，align-centent是不生效的*/
+            /*align-content: stretch; 如果div不指定高度，会自动拉伸*/
+            align-content: space-around;
+        }
+
+        .main div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</div>
+</body>
+</html>

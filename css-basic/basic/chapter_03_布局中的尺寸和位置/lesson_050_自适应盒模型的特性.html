@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 200px;
+            background: pink;
+        }
+
+        /*指定宽度时会膨胀到外面*/
+        /*.box2 {
+            width: 300px;
+            height: 100px;
+            background: skyblue;
+            padding: 10px;
+            border: 5px black solid;
+            margin: 10px;
+        }*/
+
+        /*不指定宽度时，会自适应*/
+        .box2 {
+            /*width: 300px;*/
+            height: 100px;
+            background: skyblue;
+            padding: 10px;
+            border: 5px black solid;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2">盒子的内容</div>
+</div>
+</body>
+</html>
+<!--
+自适应盒模型的特性：
+自适应盒模型指的是，当盒子不设置宽度时时，盒模型相关组成部分的处理方式是如何的。
+-->

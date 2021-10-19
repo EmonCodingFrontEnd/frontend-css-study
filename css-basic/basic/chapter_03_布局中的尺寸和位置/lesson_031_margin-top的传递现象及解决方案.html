@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: pink;
+            /*overflow: hidden; !*触发了BFC也可以解决*!*/
+            /*border: 1px black solid; !**如果去掉border，会出现margin-top问题*!*/
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+</body>
+</html>
+
+<!--
+3、margin-top传递的现象及解决方案
+解决方法1：为box1添加border属性
+解决方法2：使用padding-top替换margin-top
+解决方法3：利用flex和grid布局
+-->

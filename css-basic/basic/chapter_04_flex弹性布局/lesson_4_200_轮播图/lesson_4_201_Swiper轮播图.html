@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="./iconfont.css">
+    <style>
+        .swiper-container {
+            position: relative;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            height: 28px;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #c6bcaf;
+            margin: 0 4px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: white;
+        }
+
+        .swiper-button-prev {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-button-prev i {
+            font-size: 44px;
+            color: white;
+        }
+
+        .swiper-button-next {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-button-next i {
+            font-size: 44px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="1.webp" alt=""/>
+        </div>
+        <div class="swiper-slide">
+            <img src="2.webp" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="3.webp" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination">
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+    </div>
+
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev">
+        <i class="iconfont icon-swiperhoutui"></i>
+    </div>
+
+    <div class="swiper-button-next">
+        <i class="iconfont icon-swiperqianjin"></i>
+    </div>
+</div>
+</body>
+</html>

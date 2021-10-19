@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*一个子元素的情况*/
+        .main {
+            width: 500px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+        }
+
+        .main div {
+            width: 600px;
+            height: 100px;
+            background: pink;
+            /*flex-shrink: 1; 默认的*/
+            /*flex-shrink: 0;*/
+            flex-shrink: 0.5; /*收缩溢出空间的1/2*/
+        }
+
+        /*多个子元素的情况：会按照flex-grow的比例等分*/
+        .main2 {
+            width: 500px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+        }
+
+
+        .main2 div:nth-of-type(1) {
+            width: 300px;
+            height: 100px;
+            background: pink;
+            /*flex-shrink: 1; !*300 - (300+400-500)*3/7 = 214*!*/
+            flex-shrink: 2; /*300 - (300+400-500)*6/10=180*/
+        }
+
+
+        .main2 div:nth-of-type(2) {
+            width: 400px;
+            height: 100px;
+            background: pink;
+            /*flex-shrink: 1; !*400 - (300+400-500)*4/7 = 285*!*/
+            flex-shrink: 1; /*400 - (300+400-500)*4/10=320*/
+        }
+    </style>
+</head>
+<body>
+<!--一个子元素的情况-->
+<div class="main">
+    <div>1</div>
+</div>
+<hr>
+<!--多个子元素的情况-->
+<div class="main2">
+    <div>1</div>
+    <div>2</div>
+</div>
+</body>
+</html>

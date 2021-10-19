@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            background: skyblue;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /*
+        flex: 1 等效于
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        */
+        /*
+        flex: 0 等效于
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        */
+        /*
+        flex: auto 等效于
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        }
+        */
+        /*
+        flex: 1 0 50% 等效于
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 50%;
+        }
+        */
+        .main div {
+            background: pink;
+            flex: 1 0 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>测试文字</div>
+</div>
+</body>
+</html>

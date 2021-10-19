@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*弹性布局*/
+        .main {
+            height: 100vh;
+            background: skyblue;
+            display: flex;
+        }
+
+        .col1 {
+            width: 200px;
+            background: pink;
+        }
+
+        .col2 {
+            flex-grow: 1;
+            background: springgreen;
+        }
+
+        .col3 {
+            width: 100px;
+            background: tomato;
+        }
+
+        /*浮动布局*/
+        .main2 {
+            height: 100vh;
+            background: skyblue;
+        }
+
+        .col11 {
+            width: 200px;
+            height: 90%;
+            float: left;
+            background: pink;
+        }
+
+        .col22 {
+            height: 100%;
+            background: lightcoral;
+            /*margin-left: 200px;*/ /*避免和左侧内容叠加一起，方式一：左边让出200px*/
+            overflow: hidden; /*避免和左侧内容叠加一起，方式二：触发BFC*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="col1"></div>
+    <div class="col2"></div>
+    <div class="col3"></div>
+</div>
+<!--<div class="main2">
+    <div class="col11"></div>
+    <div class="col22"></div>
+</div>-->
+</body>
+</html>

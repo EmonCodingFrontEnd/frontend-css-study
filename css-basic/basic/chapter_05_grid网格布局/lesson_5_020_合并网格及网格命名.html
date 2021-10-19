@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*==========指定所有位置==========*/
+        .main {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "a1 a1 a2"
+            "a1 a1 a2"
+            "a3 a3 a3";
+        }
+
+        .main div {
+            background: pink;
+            border: 1px black solid;
+        }
+
+        .main div:nth-of-type(1) {
+            grid-area: a1;
+        }
+
+        .main div:nth-of-type(2) {
+            grid-area: a2;
+        }
+
+        .main div:nth-of-type(3) {
+            grid-area: a3;
+        }
+
+        /*==========指定部分位置==========*/
+        .main2 {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "a1 a2 a3";
+        }
+
+        .main2 div {
+            background: pink;
+            border: 1px black solid;
+            box-sizing: border-box;
+        }
+
+        .main2 div:nth-of-type(1) {
+            grid-area: a3;
+        }
+
+        /*==========缩写==========*/
+        .main3 {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+            grid-template:
+            "a1 a1 a2" 1fr /*行*/
+            "a1 a1 a2" 1fr
+            "a3 a3 a3" 1fr
+            / 1fr 1fr 1fr; /*列*/
+        }
+
+        .main3 div {
+            background: pink;
+            border: 1px black solid;
+            box-sizing: border-box;
+        }
+
+        .main3 div:nth-of-type(1) {
+            grid-area: a1;
+        }
+
+        .main3 div:nth-of-type(2) {
+            grid-area: a2;
+        }
+
+        .main3 div:nth-of-type(3) {
+            grid-area: a3;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<hr>
+<div class="main2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<hr>
+<div class="main3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /*弹性布局*/
+        .main {
+            width: 500px;
+            height: 100px;
+            background: skyblue;
+            display: flex;
+            align-items: center;
+        }
+
+        .main div {
+            width: 100px;
+            height: 80px;
+            background: pink;
+            margin-left: 10px;
+            flex-shrink: 0
+        }
+
+        /*普通布局*/
+        .main2 {
+            width: 500px;
+            height: 100px;
+            background: skyblue;
+        }
+
+        section {
+            width: 2000px;
+        }
+
+        .main2 div {
+            width: 100px;
+            height: 80px;
+            background: pink;
+            margin-right: 10px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+</div>
+<hr>
+<div class="main2">
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </section>
+</div>
+</body>
+</html>

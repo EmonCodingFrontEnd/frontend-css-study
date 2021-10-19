@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*方式一：使用align-items【推荐】*/
+        .box1 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+            align-items: center;
+        }
+
+        /*方式二：可以适合多行文字*/
+        /*.box1 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }*/
+
+        /*方式三：传统方式，不适合多行文字*/
+        /*.box1 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            line-height: 200px;
+        }*/
+
+        /*方式四：可以适合多行文字*/
+        /*.box1 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: table-cell;
+            vertical-align: middle;
+        }*/
+
+        /*弹性布局处理块级居中【推荐】*/
+        .box2 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+            justify-content: center; /*左右居中*/
+            align-items: center; /*上下居中*/
+        }
+
+        .box2 div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+
+        /*非弹性布局居中*/
+        /*.box2 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            position: relative;
+        }
+
+        .box2 div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); !*相对于当前元素的宽度和高度位移*!
+        }*/
+
+
+        /*通过弹性布局+margin:auto*/
+        /*.box2 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            display: flex;
+        }
+
+        .box2 div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            margin: auto;
+        }*/
+
+        /*通过绝对定位：奇技淫巧*/
+        /*.box2 {
+            width: 300px;
+            height: 200px;
+            background: skyblue;
+            position: relative;
+        }
+
+        .box2 div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }*/
+    </style>
+</head>
+<body>
+<!--内联居中-->
+<div class="box1">
+    词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字词儿是文字
+</div>
+<hr>
+<!--块级居中-->
+<div class="box2">
+    <div></div>
+</div>
+</body>
+</html>

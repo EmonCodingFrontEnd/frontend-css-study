@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background: pink;
+            padding: 10px;
+            border: 5px black solid;
+            box-sizing: border-box; /*怪异盒模型*/
+        }
+
+        /*怪异盒模型应用1：利用怪异盒模型设置div.box2的高度不受padding和border影响*/
+        .box2 {
+            width: 400px;
+            height: 111px;
+            padding: 20px 0;
+            background: skyblue;
+            box-sizing: border-box;
+        }
+
+        /*怪异盒模型应用2：解决input指定width:100%+padding时的溢出*/
+        input {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2">个人信息</div>
+<input type="text">
+</body>
+</html>
+
+<!--
+在标准模型中，
+如果你给盒设置width和height，实际设置的是content box。padding和border再加上设置的宽高一起决定整个盒子的大小。
+
+在怪异盒模型中，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。
+
+利用box-sizing属性设置标准盒模型和怪异盒模型：
+标准盒模型：content-box: width、height->content
+怪异盒模型：border-box: width、height->content + padding + border
+
+怪异盒模型的应用：
+应用1、量取尺寸时不用再去计算一些值
+应用2、解决一些需要设置百分比和盒模型值时的场景
+-->

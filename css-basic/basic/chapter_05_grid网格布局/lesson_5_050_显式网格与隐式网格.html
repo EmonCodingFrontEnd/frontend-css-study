@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*==========标准网格==========*/
+        .main {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+
+            /*第一套，行隐式*/
+            /*grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+            grid-auto-flow: row; !*默认：row 就是行产生隐式网格*!
+            grid-auto-rows: 100px; !*可以调节隐式网格的高度*!*/
+
+            /*第二套，列隐式*/
+            grid-template-columns: 100px;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-flow: column; /*column 就是列产生隐式网格*/
+            grid-auto-columns: 100px;
+        }
+
+        .main div {
+            background: pink;
+            border: 1px black solid;
+            box-sizing: border-box;
+        }
+
+        /*==========内联网格==========*/
+        .main2 {
+            height: 300px;
+            background: skyblue;
+            display: inline-grid;
+
+            /*第一套，行隐式*/
+            /*grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+            grid-auto-flow: row; !*默认：row 就是行产生隐式网格*!
+            grid-auto-rows: 100px; !*可以调节隐式网格的高度*!*/
+
+            /*第二套，列隐式*/
+            grid-template-columns: 100px;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-flow: column;
+            grid-auto-columns: 100px;
+        }
+
+        .main2 div {
+            background: pink;
+            border: 1px black solid;
+            box-sizing: border-box;
+        }
+
+        /*==========网格的紧密排列==========*/
+        .main3 {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+            display: grid;
+
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px;
+            grid-auto-flow: row dense; /*紧密排列网格*/
+            grid-auto-rows: 100px;
+        }
+
+        .main3 div {
+            background: pink;
+            border: 1px black solid;
+            box-sizing: border-box;
+        }
+
+        .main3 div:nth-of-type(1) {
+            grid-column-start: 2; /*让网格从第二个开始*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+<hr>
+<div class="main2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</div>
+<hr>
+<div class="main3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</div>
+</body>
+</html>
